@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League Standings</title>
+    <meta name="logo" content="https://www.premierleague.com/resources/rebrand/v7.153.16/i/elements/pl-main-logo.png">
+    <link rel="icon" href="https://www.premierleague.com/resources/rebrand/v7.153.16/i/favicon/favicon-196x196.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+</head>
+<body>
+    <div class="main">
+        <div class="judul">
+            <img src="https://www.premierleague.com/resources/rebrand/v7.153.16/i/elements/pl-main-logo.png" alt="Logo" class="logo">
+            <h1>Premier League Standings 2024-2025</h1>
+        </div>
+        <div id="klasemen" class="klasemen-main">
+            <table class="table">
+                <tr>
+                    <th>Rank</th>
+                    <th>Team</th>
+                    <th>Games Played</th>
+                    <th>Won</th>
+                    <th>Draw</th>
+                    <th>Lost</th>
+                    <th>GD</th>
+                    <th>Points</th>
+                </tr>
+                {% for team in standings %}
+                <tr>
+                    <td class="rank {% if team.note %}rank-with-note{% endif %}" style="border-color: {{team.note.color if team.note else ''}};">
+                        {{team.stats[10].displayValue}}
+                    </td>
+                    <td class="team-cell"><img src="{{team.team.logos[0].href}}" alt="{{team.team.name}}" width="30">{{team.team.displayName}}</td>
+                    <td>{{team.stats[0].displayValue}}</td>
+                    <td>{{team.stats[7].displayValue}}</td>
+                    <td>{{team.stats[6].displayValue}}</td>
+                    <td>{{team.stats[1].displayValue}}</td>
+                    <td>{{team.stats[2].displayValue}}</td>
+                    <td>{{team.stats[3].displayValue}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    <div class="teks"><a href="https://github.com/faris0520">Faris0520</a> | <a href="https://github.com/azharimm/football-standings-api">azharimm</a></div>
+    <div class="teks2">Updated daily.</div>
+</body>
+</html>

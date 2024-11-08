@@ -1,0 +1,99 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0e0e0, #ffffff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.main{
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.judul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+    background-image: url("https://raw.githubusercontent.com/Faris0520/epl-table-flask/refs/heads/main/image.png?token=GHSAT0AAAAAACW33HHPREFKUZMZC4S73ZGKZZOKBYQ");
+    background-size: cover; /* Mengatur ukuran background agar memenuhi elemen */
+    background-position: center; /* Menempatkan background di tengah */
+    padding: 20px; /* Tambahkan padding jika ingin ruang tambahan di sekitar judul */
+    border-radius: 10px; /* Membuat sudut elemen menjadi bulat */
+}
+
+.judul .logo{
+    width: 40px;
+    height: auto;
+}
+
+h1{
+    text-align: center;
+    color: #ffffff;
+}
+
+.team-cell {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.team-cell img {
+    margin-right: 10px;
+}
+
+.klasemen-main{
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td{
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th{
+    background-color: rgba(255,255,255,0.4)
+}
+
+.rank {
+    position: relative;
+    padding: 5px;
+}
+
+.rank-with-note {
+    border-left: 7px solid; /* Memberikan border berwarna di sebelah kiri angka */
+    padding-left: 10px; /* Memberikan jarak antara border dan angka */
+}
+
+.teks{
+    position: fixed;
+    right: 10px;
+    bottom: 11px;
+    color: #a8b1aa;
+    font-size: 12px;
+}
+
+.teks2{
+    position: fixed;
+    left: 10px;
+    bottom: 11px;
+    color: #22407b;
+    font-size: 12px;
+}
