@@ -25,7 +25,7 @@ body{
     justify-content: center;
     gap: 15px;
     position: relative;
-    background-image: url("https://raw.githubusercontent.com/Faris0520/epl-table-flask/refs/heads/main/image.png?token=GHSAT0AAAAAACW33HHPREFKUZMZC4S73ZGKZZOKBYQ");
+    background-image: url("./image.png");
     background-size: cover; /* Mengatur ukuran background agar memenuhi elemen */
     background-position: center; /* Menempatkan background di tengah */
     padding: 20px; /* Tambahkan padding jika ingin ruang tambahan di sekitar judul */
